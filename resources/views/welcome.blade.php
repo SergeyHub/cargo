@@ -44,14 +44,14 @@
                         <div class="p-6">
                             <div class="flex items-center">
                                 <div class="ml-4 text-lg leading-7 font-semibold">
-                                    <a href="#" class="underline text-gray-900 dark:text-white">Get Json Data</a>
+                                    <a href="{{ route('post.index') }}" class="underline text-gray-900 dark:text-white">Get Json Data</a>
                                 </div>
                             </div>
 
                             <div class="ml-12">
-                                <!--<div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">-->
                                 <div class="mt-2 text-lg dark:text-gray-400 text-sm">
-                                    from <a href="https://jsonplaceholder.typicode.com/posts" target="_blank" style="color: blue">
+                                    from <a href="https://jsonplaceholder.typicode.com/posts"
+                                            class="underline" target="_blank" style="color: blue">
                                         https://jsonplaceholder.typicode.com/posts
                                     </a>
                                 </div>
