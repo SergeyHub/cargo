@@ -1,6 +1,6 @@
-#### Main stages of development
+### Main stages of development
 https://www.youtube.com/watch?v=OtGrKywzRNI
-##### 1. Installation Project Template. Create Database
+#### 1. Installation Project Template. Create Database
 
 `composer create-project --prefer-dist  laravel/laravel .`   
 `npm install`  
@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=OtGrKywzRNI
 **`git remote add origin https://github.com/SergeyHub/cargo.git`**  
 `git push -u origin master`  
 
-###### Postgersql
+##### Postgersql
 
 ```
 Let's start SQL Shell (psql). The program will prompt you to enter the name    
@@ -50,9 +50,11 @@ Migrated:  2019_08_19_000000_create_failed_jobs_table (9.15ms)
 Migrating: 2019_12_14_000001_create_personal_access_tokens_table
 Migrated:  2019_12_14_000001_create_personal_access_tokens_table (10.80ms)
 ```
-##### 2. Edit welcome.blade.php
+#### 2. Edit welcome.blade.php
 
-##### 3. Create PostController and PostController route. Create app.blade & index.blade
+#### 3. Create PostController and PostController route. Create app.blade & index.blade
 `php artisan make:controller PostController`  
 
 ![Screenshot](readme/posts.JPG) 
+
+#### 4. Edit PostController index() use collect 
