@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=OtGrKywzRNI
 **`git remote add origin https://github.com/SergeyHub/cargo.git`**  
 `git push -u origin master`  
 
-##### Postgersql
+##### 1.1 Postgersql
 
 ```
 Let's start SQL Shell (psql). The program will prompt you to enter the name    
@@ -29,7 +29,7 @@ Next, you will need to enter a password for the user
   database list  
 `select datname from pg_database;`  
 
-Edit  env. file    
+**`Edit  env. file`**    
 ```
 DB_CONNECTION=pgsql
 DB_HOST=localhost
@@ -38,6 +38,19 @@ DB_DATABASE=cargo
 DB_USERNAME=postgres
 DB_PASSWORD=123456
 ```
+##### 1.2 MySQL
+
+`mysql -u root -p`  
+`create database cargo; db_name;`  
+`drop database db_name;`   
+`show databases;`  
+`use db_name;`  
+`show tables;`   
+`drop table table_name;`  
+`exit`  
+
+##### 1.3 Migration
+
 `php artisan migrate`  
 ```
 Migration table created successfully.
@@ -50,6 +63,7 @@ Migrated:  2019_08_19_000000_create_failed_jobs_table (9.15ms)
 Migrating: 2019_12_14_000001_create_personal_access_tokens_table
 Migrated:  2019_12_14_000001_create_personal_access_tokens_table (10.80ms)
 ```
+
 #### 2. Edit welcome.blade.php
 
 #### 3. Create PostController and PostController route. Create app.blade & index.blade
@@ -58,3 +72,11 @@ Migrated:  2019_12_14_000001_create_personal_access_tokens_table (10.80ms)
 ![Screenshot](readme/posts.JPG) 
 
 #### 4. Edit PostController index() use collect 
+
+![Screenshot](readme/getbyUniqueUserId.JPG) 
+
+#### 5. Create navbar style & script blade files
+
+#### 6. Create CollectionController
+
+`php artisan make:controller CollectionController`  

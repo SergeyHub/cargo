@@ -19,7 +19,9 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+        @include('includes.style')
     </head>
+    @include('includes.navbar')
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
@@ -44,7 +46,8 @@
                         <div class="p-6">
                             <div class="flex items-center">
                                 <div class="ml-4 text-lg leading-7 font-semibold">
-                                    <a href="{{ route('post.index') }}" class="underline text-gray-900 dark:text-white">Get Json Data</a>
+                                    <a href="{{ route('post.index') }}"
+                                       class="underline text-gray-900 dark:text-white">Get Json Data</a>
                                 </div>
                             </div>
 
@@ -120,5 +123,6 @@
                 </div>
             </div>
         </div>
+        @include('includes.script')
     </body>
 </html>
