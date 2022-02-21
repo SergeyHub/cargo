@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::get('/post', [PostController::class, 'index'])->name('post.index');
+Route::get('/collection.index', [CollectionController::class, 'index'])->name('collection.index');
