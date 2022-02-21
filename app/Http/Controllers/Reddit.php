@@ -31,11 +31,38 @@ class Reddit extends Controller
 
             //return false; // skip this post element
             //return true; // keep this post element
-            return $post['data']['post_hint'] === 'image';
+            //return $post['data']['post_hint'] === 'image';
+
+            if ($post['data']['post_hint'] !== 'image') {
+                return false;
+            }
+
+            return \Str::contains($post['data']['url'], 'i.redd.it');
         });
 
         return view('reddit.filter', [
             'posts' => $posts
+        ]);
+    }
+
+    public function pluck()
+    {
+        $images = $this->posts->filter(function($post, $key)
+        {
+
+            //return false; // skip this post element
+            //return true; // keep this post element
+            //return $post['data']['post_hint'] === 'image';
+
+            if ($post['data']['post_hint'] !== 'image') {
+                return false;
+            }
+            return \Str::contains($post['data']['url'], 'i.redd.it');
+
+        })->pluck('data.url')->all();
+
+        return view('reddit.pluck', [
+            'images' => $images
         ]);
     }
 }

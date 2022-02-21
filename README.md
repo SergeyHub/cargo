@@ -86,3 +86,4 @@ https://www.youtube.com/watch?v=a2QvlLs0uEk
 `git push -u origin master`
 
 #### 7. Release Filter Method
+#### 8. Release Pluck Method
