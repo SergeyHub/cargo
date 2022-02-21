@@ -7,12 +7,12 @@ use Illuminate\Support\Facades\Http;
 //use Illuminate\Support\Collection;
 //use Illuminate\Support\Facades\Collection;
 
-class PostController extends Controller
+class JsonPlaceHolder extends Controller
 {
-
 
     public function index()
     {
+
         $posts = Http::get('https://jsonplaceholder.typicode.com/posts')->json();
         $collection = collect($posts);
         //$uniqueUserIds=$collection->unique('userId');

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
-class CollectionController extends Controller
+class Reddit extends Controller
 {
     private $posts;
 
@@ -18,7 +18,9 @@ class CollectionController extends Controller
 
     public  function index()
     {
-       return view('collections.index', [
+       //return 'Hello, reddit!';
+       //return $this->posts;
+        return view('reddit.index', [
            'posts' => $this->posts
        ]);
     }

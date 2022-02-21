@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\CollectionController;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\Reddit;
+use App\Http\Controllers\JsonPlaceHolder;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,5 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/post', [PostController::class, 'index'])->name('post.index');
-Route::get('/collection.index', [CollectionController::class, 'index'])->name('collection.index');
+Route::get('/post', [JsonPlaceHolder::class, 'index'])->name('post.index');
+Route::get('/reddit.index', [Reddit::class, 'index'])->name('reddit.index');

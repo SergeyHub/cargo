@@ -17,10 +17,10 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Laravel Collection
+                        Reddit Laravel Collection
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{{ route('collection.index') }}">Index Method</a></li>
+                        <li><a class="dropdown-item" href="{{ route('reddit.index') }}">Index Method</a></li>
                         <li><a class="dropdown-item" href="#">PluckMethod</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
