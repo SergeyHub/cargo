@@ -21,3 +21,5 @@ Route::get('/', function () {
 
 Route::get('/post', [JsonPlaceHolder::class, 'index'])->name('post.index');
 Route::get('/reddit.index', [Reddit::class, 'index'])->name('reddit.index');
+Route::get('/reddit.filter', [Reddit::class, 'filter'])->name('reddit.filter');
+Route::get('/reddit.pluck', [Reddit::class, 'pluck'])->name('reddit.pluck');

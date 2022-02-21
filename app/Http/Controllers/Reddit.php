@@ -24,4 +24,18 @@ class Reddit extends Controller
            'posts' => $this->posts
        ]);
     }
+
+    public  function filter()
+    {
+        $posts = $this->posts->filter(function($post, $key){
+
+            //return false; // skip this post element
+            //return true; // keep this post element
+            return $post['data']['post_hint'] === 'image';
+        });
+
+        return view('reddit.filter', [
+            'posts' => $posts
+        ]);
+    }
 }

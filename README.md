@@ -83,4 +83,6 @@ Migrated:  2019_12_14_000001_create_personal_access_tokens_table (10.80ms)
 
 ##### 6.1 Rename CollectionController Create layout_reddit/default.blade reddit/index.blade
 https://www.youtube.com/watch?v=a2QvlLs0uEk
+`git push -u origin master`
 
+#### 7. Release Filter Method
