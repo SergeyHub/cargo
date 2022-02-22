@@ -7,27 +7,27 @@ use Illuminate\Support\Facades\Http;
 //use Illuminate\Support\Collection;
 //use Illuminate\Support\Facades\Collection;
 
-class JsonPlaceHolder extends Controller
+class Post extends Controller
 {
 
     public function index()
     {
 
         $posts = Http::get('https://jsonplaceholder.typicode.com/posts')->json();
-        $collection = collect($posts);
+        //$collection = collect($posts);
         //$uniqueUserIds=$collection->unique('userId');
         //$count=$collection->countBy('userId');
         //$total_count=$collection->countBy('id');
         //$chunk=$collection->take('10');
-        $last=$collection->last();
-        //dd($posts);
+        //$last=$collection->last();
+        dd($posts);
         //dd($collection);
         //dd($uniqueUserIds);
         //dd($count);
         //dd($total_count);
         //echo 'return N items from json data = '.'<br>';
         //dd($chunk);
-        dd($last);
+        //dd($last);
         return view('index');
     }
 }

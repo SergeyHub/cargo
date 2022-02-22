@@ -1,6 +1,6 @@
 ### Main stages of development
 https://www.youtube.com/watch?v=OtGrKywzRNI
-#### 1. Installation Project Template. Create Database
+##### 1. Installation Project Template. Create Database
 
 `composer create-project --prefer-dist  laravel/laravel .`   
 `npm install`  
@@ -49,6 +49,15 @@ DB_PASSWORD=123456
 `drop table table_name;`  
 `exit`  
 
+**`Edit  env. file`**   
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=cargo
+DB_USERNAME=root
+DB_PASSWORD=123456
+```
 ##### 1.3 Migration
 
 `php artisan migrate`  
@@ -64,9 +73,9 @@ Migrating: 2019_12_14_000001_create_personal_access_tokens_table
 Migrated:  2019_12_14_000001_create_personal_access_tokens_table (10.80ms)
 ```
 
-#### 2. Edit welcome.blade.php
+##### 2. Edit welcome.blade.php
 
-#### 3. Create PostController and PostController route. Create app.blade & index.blade
+##### 3. Create PostController and PostController route. Create app.blade & index.blade
 `php artisan make:controller PostController`  
 
 ![Screenshot](readme/posts.JPG) 
@@ -75,15 +84,22 @@ Migrated:  2019_12_14_000001_create_personal_access_tokens_table (10.80ms)
 
 ![Screenshot](readme/getbyUniqueUserId.JPG) 
 
-#### 5. Create navbar style & script blade files
+##### 5. Create navbar style & script blade files
 
-#### 6. Create CollectionController
-
+https://api.cargo.tech/   
+https://api.cargo.tech/v1/cargos   
 `php artisan make:controller CollectionController`  
 
 ##### 6.1 Rename CollectionController Create layout_reddit/default.blade reddit/index.blade
-https://www.youtube.com/watch?v=a2QvlLs0uEk
+https://www.youtube.com/watch?v=a2QvlLs0uEk  
 `git push -u origin master`
 
-#### 7. Release Filter Method
-#### 8. Release Pluck Method
+##### 7. Release Filter Method
+##### 8. Release Pluck Method
+
+##### 9. Create CargoController
+
+`php artisan make:controller CargoController`  
+
+##### 10. Create Contains Method for RedditController
+

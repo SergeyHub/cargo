@@ -11,18 +11,20 @@ class Reddit extends Controller
 
     public function __construct()
     {
-        $json = Http::get('https://www.reddit.com/r/MechanicalKeyboards.json')
-                ->json();
+        $json = Http::get('https://www.reddit.com/r/MechanicalKeyboards.json')->json();
+        //$this->posts = collect($json['data']);
         $this->posts = collect($json['data']['children']);
     }
 
     public  function index()
     {
        //return 'Hello, reddit!';
+       //$json = Http::get('https://www.reddit.com/r/MechanicalKeyboards.json')->json();
+        dd($this->posts);
        //return $this->posts;
-        return view('reddit.index', [
+       /* return view('reddit.index', [
            'posts' => $this->posts
-       ]);
+       ]);*/
     }
 
     public  function filter()
@@ -62,6 +64,27 @@ class Reddit extends Controller
         })->pluck('data.url')->all();
 
         return view('reddit.pluck', [
+            'images' => $images
+        ]);
+    }
+
+    public function contains()
+    {
+        if(!$this->posts->contains('data.post_hint', 'image')){
+            return view('reddit.contains-empty');
+        }
+
+        $images = $this->posts->filter(function($post, $key)
+        {
+
+            if ($post['data']['post_hint'] !== 'image') {
+                return false;
+            }
+            return \Str::contains($post['data']['url'], 'i.redd.it');
+
+        })->pluck('data.url')->all();
+
+        return view('reddit.contains', [
             'images' => $images
         ]);
     }

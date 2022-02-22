@@ -11,30 +11,38 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('post.index') }}">From Placeholder</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Reddit Laravel Collection
+                        Reddit Data
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{{ route('reddit.index') }}">Index Method</a></li>
                         <li><a class="dropdown-item" href="{{ route('reddit.filter') }}">FilterMethod</a></li>
                         <li><a class="dropdown-item" href="{{ route('reddit.pluck') }}">PluckMethod</a></li>
+                        <li><a class="dropdown-item" href="{{ route('reddit.contains') }}">ContainsMethod</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <!-- Cargo -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Cargo Data
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{{ route('cargo.test') }}">Test Cargo Data</a></li>
+                        <li><a class="dropdown-item" href="{{ route('cargo.index') }}">IndexMethod</a></li>
+                        <li><a class="dropdown-item" href="{{-- route('reddit.pluck') --}}">PluckMethod</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
                 </li>
+
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+
         </div>
     </div>
 </nav>

@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\CargoController;
 use App\Http\Controllers\Reddit;
-use App\Http\Controllers\JsonPlaceHolder;
+use App\Http\Controllers\Post;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -9,17 +10,21 @@ use Illuminate\Support\Facades\Route;
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
 */
 
 Route::get('/', function () {
     return view('welcome');
 });
+//   Post
+Route::get('/post', [Post::class, 'index'])->name('post.index');
 
-Route::get('/post', [JsonPlaceHolder::class, 'index'])->name('post.index');
+//   https://www.reddit.com/r/MechanicalKeyboards.json
 Route::get('/reddit.index', [Reddit::class, 'index'])->name('reddit.index');
 Route::get('/reddit.filter', [Reddit::class, 'filter'])->name('reddit.filter');
 Route::get('/reddit.pluck', [Reddit::class, 'pluck'])->name('reddit.pluck');
+Route::get('/reddit.contains', [Reddit::class, 'contains'])->name('reddit.contains');
+
+
+Route::get('/cargo.test', [CargoController::class, 'test'])->name('cargo.test');
+Route::get('/cargo.index', [CargoController::class, 'index'])->name('cargo.index');
+
