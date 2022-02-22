@@ -102,4 +102,5 @@ https://www.youtube.com/watch?v=a2QvlLs0uEk
 `php artisan make:controller CargoController`  
 
 ##### 10. Create Contains Method for RedditController
+##### 11. Create groupby Method for RedditController
 

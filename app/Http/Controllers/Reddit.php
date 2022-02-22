@@ -20,11 +20,11 @@ class Reddit extends Controller
     {
        //return 'Hello, reddit!';
        //$json = Http::get('https://www.reddit.com/r/MechanicalKeyboards.json')->json();
-        dd($this->posts);
+       //dd($this->posts);
        //return $this->posts;
-       /* return view('reddit.index', [
+        return view('reddit.index', [
            'posts' => $this->posts
-       ]);*/
+       ]);
     }
 
     public  function filter()
@@ -86,6 +86,19 @@ class Reddit extends Controller
 
         return view('reddit.contains', [
             'images' => $images
+        ]);
+    }
+
+    public function groupby()
+    {
+        $posts = $this->posts->filter(function ($post, $key){
+           return in_array($post['data']['post_hint'],['self', 'image']);
+        })
+            ->groupBy('data.post_hint')
+            ->toArray();
+
+        return view('reddit.groupby', [
+            'posts' => $posts
         ]);
     }
 }

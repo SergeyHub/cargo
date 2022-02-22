@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Get External Json Data</a>
+        <a class="navbar-brand" href="/">Get External Json Data</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -22,6 +22,7 @@
                         <li><a class="dropdown-item" href="{{ route('reddit.filter') }}">FilterMethod</a></li>
                         <li><a class="dropdown-item" href="{{ route('reddit.pluck') }}">PluckMethod</a></li>
                         <li><a class="dropdown-item" href="{{ route('reddit.contains') }}">ContainsMethod</a></li>
+                        <li><a class="dropdown-item" href="{{ route('reddit.groupby') }}">GroupByMethod</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
