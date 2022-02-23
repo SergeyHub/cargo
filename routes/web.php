@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\CargoController;
+use App\Http\Controllers\FruitsController;
+use App\Http\Controllers\FruitsHomeController;
 use App\Http\Controllers\Reddit;
 use App\Http\Controllers\Post;
 use Illuminate\Support\Facades\Route;
@@ -27,7 +29,12 @@ Route::get('/reddit.contains', [Reddit::class, 'contains'])->name('reddit.contai
 Route::get('/reddit.groupby', [Reddit::class, 'groupby'])->name('reddit.groupby');
 Route::get('/reddit.sortby', [Reddit::class, 'sortby'])->name('reddit.sortby');
 
-//  Cargo
+//  Cargo  https://api.cargo.tech/v1/cargos
 Route::get('/cargo.test', [CargoController::class, 'test'])->name('cargo.test');
 Route::get('/cargo.index', [CargoController::class, 'index'])->name('cargo.index');
+
+
+//  Fruits   https://dev.shepherd.appoly.io/fruit.json
+//Route::get('/fruits_home', [FruitsHomeController::class, 'index']);
+Route::get('/fruit.get.data', [FruitsController::class, 'getData'])->name('fruit.get.data');
 

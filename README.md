@@ -118,4 +118,8 @@ schedule | Laravel 8 Project fetching data from url 2021
   https://www.youtube.com/watch?v=ogGBHwAoFhU  
   https://dev.shepherd.appoly.io/fruit.json  
 -----
-  
+
+##### 14. Create FruitsController FruitsHomeController
+`php artisan make:controller FruitsController`  
+`php artisan make:controller FruitsHomeController`  
+##### 15. Create FruitsController WineController FruitsHomeController     

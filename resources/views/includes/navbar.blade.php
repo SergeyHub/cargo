@@ -43,6 +43,21 @@
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
+                <!-- Fruits -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Fruits Data
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{{ route('fruit.get.data') }}">Fruit Data</a></li>
+                        <li><a class="dropdown-item" href="{{ route('cargo.index') }}">IndexMethod</a></li>
+                        <li><a class="dropdown-item" href="{{-- route('reddit.pluck') --}}">PluckMethod</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+
 
             </ul>
 
