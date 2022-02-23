@@ -16,6 +16,15 @@ class Reddit extends Controller
         $this->posts = collect($json['data']['children']);
     }
 
+    public  function show()
+    {
+        //return 'Hello, reddit!';
+       //$json = Http::get('https://www.reddit.com/r/MechanicalKeyboards.json')->json();
+        //dd($json);
+        //return $this->posts;
+
+    }
+
     public  function index()
     {
        //return 'Hello, reddit!';
@@ -98,6 +107,22 @@ class Reddit extends Controller
             ->toArray();
 
         return view('reddit.groupby', [
+            'posts' => $posts
+        ]);
+    }
+
+
+    public function sortby()
+    {
+        $posts = $this->posts->filter(function ($post, $key){
+            return $post['data']['post_hint'] === 'image';
+            //return in_array($post['data']['post_hint'],['self', 'image']);
+        })
+            ->sortBy('data.title')
+            ->values()
+            ->all();
+
+        return view('reddit.sortby', [
             'posts' => $posts
         ]);
     }

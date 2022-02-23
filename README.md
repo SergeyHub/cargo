@@ -27,7 +27,8 @@ Next, you will need to enter a password for the user
 
 `postgres=# create database cargo;`  
   database list  
-`select datname from pg_database;`  
+`select datname from pg_database;` 
+pg_dump dbname > outfile 
 
 **`Edit  env. file`**    
 ```
@@ -103,4 +104,18 @@ https://www.youtube.com/watch?v=a2QvlLs0uEk
 
 ##### 10. Create Contains Method for RedditController
 ##### 11. Create groupby Method for RedditController
-
+##### 12. Create sortyby Method for RedditController
+##### 13. Create Fruit Wine FruitType & WineType models and migrations  
+`php artisan make:model Fruit -m`     
+`php artisan make:model FruitType -m`     
+`php artisan make:model Wine -m`     
+`php artisan make:model WineType -m`   
+`php artisan migrate`     
+ 
+----
+Laravel 8 app fetching data from url using
+schedule | Laravel 8 Project fetching data from url 2021  
+  https://www.youtube.com/watch?v=ogGBHwAoFhU  
+  https://dev.shepherd.appoly.io/fruit.json  
+-----
+  

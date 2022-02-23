@@ -18,11 +18,13 @@
                         Reddit Data
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{{ route('reddit.show') }}">Show Data</a></li>
                         <li><a class="dropdown-item" href="{{ route('reddit.index') }}">Index Method</a></li>
                         <li><a class="dropdown-item" href="{{ route('reddit.filter') }}">FilterMethod</a></li>
                         <li><a class="dropdown-item" href="{{ route('reddit.pluck') }}">PluckMethod</a></li>
                         <li><a class="dropdown-item" href="{{ route('reddit.contains') }}">ContainsMethod</a></li>
                         <li><a class="dropdown-item" href="{{ route('reddit.groupby') }}">GroupByMethod</a></li>
+                        <li><a class="dropdown-item" href="{{ route('reddit.sortby') }}">SortByMethod</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>

@@ -19,11 +19,13 @@ Route::get('/', function () {
 Route::get('/post', [Post::class, 'index'])->name('post.index');
 
 //   https://www.reddit.com/r/MechanicalKeyboards.json
+Route::get('/reddit.show', [Reddit::class, 'show'])->name('reddit.show');
 Route::get('/reddit.index', [Reddit::class, 'index'])->name('reddit.index');
 Route::get('/reddit.filter', [Reddit::class, 'filter'])->name('reddit.filter');
 Route::get('/reddit.pluck', [Reddit::class, 'pluck'])->name('reddit.pluck');
 Route::get('/reddit.contains', [Reddit::class, 'contains'])->name('reddit.contains');
 Route::get('/reddit.groupby', [Reddit::class, 'groupby'])->name('reddit.groupby');
+Route::get('/reddit.sortby', [Reddit::class, 'sortby'])->name('reddit.sortby');
 
 //  Cargo
 Route::get('/cargo.test', [CargoController::class, 'test'])->name('cargo.test');
