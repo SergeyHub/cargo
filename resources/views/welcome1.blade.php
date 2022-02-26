@@ -76,24 +76,27 @@
                             <div class="ml-12">
                                 <div class="mt-2 text-lg dark:text-gray-400 text-sm">
                                     from
-                                    <a href="https://jsonplaceholder.typicode.com/posts"
+                                    <a href="https://api.cargo.tech/v1/cargos"
                                             class="underline" target="_blank" style="color: blue">
                                             https://api.cargo.tech/v1/cargos
                                     </a>
                                 </div>
                             </div>
                         </div>
-
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
+                            <div class="flex items-center">
+                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">
+                                    From
+                                </div>
+                            </div>
+
                             <div class="ml-12">
-                                <div class="ml-12">
-                                    <div class="mt-2 text-lg dark:text-gray-400 text-sm">
-                                        from
-                                        <a href="https://jsonplaceholder.typicode.com/posts"
-                                                class="underline" target="_blank" style="color: blue">
-                                            https://dev.shepherd.appoly.io/fruit.json
-                                        </a>
-                                    </div>
+                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                    <a href="https://dev.shepherd.appoly.io/fruit.json" class="underline" target="_blank"
+                                       style="color: blue">
+                                        https://dev.shepherd.appoly.io/fruit.json
+                                    </a>
+
                                 </div>
                             </div>
                         </div>

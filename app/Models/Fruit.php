@@ -15,6 +15,7 @@ class Fruit extends Model
 
     public function fruitType()
     {
-        return $this->hasMany(FruitType::class, 'fruit', 'id');
+        return $this->hasMany(FruitType::class, 'fruit', 'id')
+            ->orderBy('name','ASC');
     }
 }

@@ -13,6 +13,7 @@ class Wine extends Model
 
     public function wineType()
     {
-        return $this->hasMany(WineType::class, 'wine', 'id');
+        return $this->hasMany(WineType::class, 'wine', 'id')
+            ->orderBy('type','ASC');
     }
 }
