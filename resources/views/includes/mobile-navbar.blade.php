@@ -1,3 +1,4 @@
+
 <!-- navbar start -->
 <nav class="navbar navbar-expand-lg fixed-top">
     <!-- Brand -->
@@ -6,7 +7,8 @@
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <!--<span class="navbar-toggler-icon"></span>-->
-        <i class="fas fa-bars"></i>
+
+        <i class="fa fa-bars" aria-hidden="true"></i>
     </button>
 
     <!-- Navbar links -->

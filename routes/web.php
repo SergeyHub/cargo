@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome1');
+    return view('main');
 })->name('home');
 //   Post
 Route::get('/post', [Post::class, 'index'])->name('post.index');

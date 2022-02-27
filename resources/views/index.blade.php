@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layout_reddit.app')
 @section('content')
     <h4 class="text-center" style="margin-top:125px">List of posts by authors</h4>
 
