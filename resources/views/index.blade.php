@@ -1,7 +1,6 @@
 @extends('app')
-
 @section('content')
-    <h4 class="text-center">List of posts by authors</h4>
+    <h4 class="text-center" style="margin-top:125px">List of posts by authors</h4>
 
     <div class="card card-default">
         <div class="card-header">Posts</div>
