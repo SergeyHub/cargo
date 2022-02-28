@@ -17,27 +17,49 @@
             <li class="nav-item">
                 <a class="nav-link active" data-scroll-nav="0" href="{{ route('home') }}">home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" data-scroll-nav="1" href="{{ route('post.index') }}">PlaceHolder</a>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    Placeholder
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="{{ route('post.index') }}">Index Method</a></li>
+                    <li><a class="dropdown-item" href="#">Show</a></li>
+
+                </ul>
             </li>
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                    data-bs-toggle="dropdown" aria-expanded="false">
                     Reddit
                 </a>
-
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="{{ route('reddit.show') }}">Show Data</a></li>
+                    {{-- <li><a class="dropdown-item" href="{{ route('reddit.show') }}">Show Data</a></li> --}}
                     <li><a class="dropdown-item" href="{{ route('reddit.index') }}">Index Method</a></li>
                     <li><a class="dropdown-item" href="{{ route('reddit.filter') }}">FilterMethod</a></li>
                     <li><a class="dropdown-item" href="{{ route('reddit.pluck') }}">PluckMethod</a></li>
                     <li><a class="dropdown-item" href="{{ route('reddit.contains') }}">ContainsMethod</a></li>
                     <li><a class="dropdown-item" href="{{ route('reddit.groupby') }}">GroupByMethod</a></li>
                     <li><a class="dropdown-item" href="{{ route('reddit.sortby') }}">SortByMethod</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
             </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    Cargo
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="{{ route('cargo.show') }}">Show Data</a></li>
+                    <li><a class="dropdown-item" href="{{ route('cargo.index') }}">Index Method</a></li>
+                    <li><a class="dropdown-item" href="{{ route('cargotest.index') }}">CargoTestIndex</a></li>
+                </ul>
+            </li>
+
+
             <li class="nav-item">
                 <a class="nav-link" data-scroll-nav="3" href="#">download</a>
             </li>

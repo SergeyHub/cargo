@@ -21,7 +21,7 @@ class Reddit extends Controller
         //return 'Hello, reddit!';
        //$json = Http::get('https://www.reddit.com/r/MechanicalKeyboards.json')->json();
         //dd($json);
-        //return $this->posts;
+        return $this->posts;
 
     }
 
@@ -31,6 +31,7 @@ class Reddit extends Controller
        //$json = Http::get('https://www.reddit.com/r/MechanicalKeyboards.json')->json();
        //dd($this->posts);
        //return $this->posts;
+
         return view('reddit.index', [
            'posts' => $this->posts
        ]);

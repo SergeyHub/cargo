@@ -13,7 +13,7 @@
                         </div>
                         <span class="badge badge-primary badge-pill">{{$countUnique[$uniqueUserId['userId']]}}posts</span>
                         <div class="col-md-2">
-                            <a href="{{ route('post.index', $uniqueUserId['userId']) }}"
+                            <a href="{{ route('post.show', $uniqueUserId['userId']) }}"
                                class="btn btn-sm float-right btn-success">See more</a>
                         </div>
                     </li>

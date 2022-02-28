@@ -23,7 +23,7 @@
     </style>
     @include('includes.style')
 </head>
-@include('includes.navbar1')
+@include('includes.mobile-navbar')
 <body>
     <div class="container">
         <div class="row">

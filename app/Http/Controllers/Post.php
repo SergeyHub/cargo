@@ -17,6 +17,7 @@ class Post extends Controller
         $collection = collect($posts);
         $uniqueUserIds=$collection->unique('userId');
         $countUnique=$collection->countBy('userId');
+
         //dump($countUnique);
         //$total_count=$collection->countBy('id');
         //$chunk=$collection->take('10');
@@ -32,6 +33,15 @@ class Post extends Controller
         return view('index',[
             'uniqueUserIds'=>$uniqueUserIds,
             'countUnique'=>$countUnique
+        ]);
+    }
+
+    public  function  show($id){
+        $posts=Http::get('https://jsonplaceholder.typicode.com/posts')->json();
+        $collections=collect($posts)->where('userId', $id);
+        return view('show',[
+            'collections'=>$collections,
+            'id'=>$id
         ]);
     }
 }
